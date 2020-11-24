@@ -1,0 +1,13 @@
+check current date
+
+if current date is not equal to the date input
+then drop table
+update the date input
+
+or
+
+if current date is equal to the date input
+no action
+else
+drop table
+and update date input
