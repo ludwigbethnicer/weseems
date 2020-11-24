@@ -1,1 +1,8 @@
 /** Default Style **/
+
+.w360center {
+	width: 100%;
+	max-width: 453px;
+	margin: 0 auto;
+	margin-bottom: 4rem;
+}

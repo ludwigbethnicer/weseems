@@ -16,4 +16,4 @@
 	<script src="assets/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="assets/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" oncontextmenu="return false;">
+<body id="myHome" data-spy="scroll" data-target=".navbar" data-offset="60" oncontextmenu="return false;">
