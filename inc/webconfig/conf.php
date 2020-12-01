@@ -18,6 +18,7 @@
 		$sysname = $row_webconf['sys_name'];
 		$sysver = $row_webconf['sys_ver'];
 		$syslogo = $row_webconf['sys_logo'];
+		$navbarlogo = $row_webconf['navbar_logo'];
 		$favicon = $row_webconf['favicon'];
 		$quotetitle = $row_webconf['quote_title'];
 		$ceopres = $row_webconf['ceo_pres'];

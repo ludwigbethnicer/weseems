@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh">
-	<title></title>
+	<title><?php echo $page_title; ?></title>
 	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 	<META HTTP-EQUIV="Expires" CONTENT="-1">
 	<link rel="icon" type="image/png">
@@ -16,4 +16,4 @@
 	<script src="../../assets/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="../../assets/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body id="myLogin" class="bg-light" data-spy="scroll" data-target=".navbar" data-offset="60" oncontextmenu="return false;">
+<body id="myAuth" class="bg-light" data-spy="scroll" data-target=".navbar" data-offset="60" oncontextmenu="return false;">

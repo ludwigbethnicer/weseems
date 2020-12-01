@@ -1,0 +1,9 @@
+#c01217	=>	navbar
+
+#ed4337	=>	background
+
+#ffe9e9	=>	icon details
+
+#ff8c8c	=>	icon details 2
+
+#323232	=>	footer 

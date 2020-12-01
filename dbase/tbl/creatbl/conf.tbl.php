@@ -19,6 +19,7 @@
 				sys_name VARCHAR(254) NOT NULL, 
 				sys_ver VARCHAR(254) NOT NULL, 
 				sys_logo VARCHAR(254) NOT NULL, 
+				navbar_logo VARCHAR(254) NOT NULL, 
 				favicon VARCHAR(254) NOT NULL, 
 				quote_title VARCHAR(254) NOT NULL, 
 				ceo_pres VARCHAR(254) NOT NULL, 
@@ -30,6 +31,9 @@
 				themename VARCHAR(254) NOT NULL, 
 				domainhome VARCHAR(254) NOT NULL, 
 				created DATETIME NOT NULL, 
+				primarycolor VARCHAR(254) NOT NULL, 
+				secondarycolor VARCHAR(254) NOT NULL, 
+				tertiarycolor VARCHAR(254) NOT NULL, 
 				modified TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp());";
 			$cnn->exec($sql);
 			echo "Database Table created successfully: {$TableTitle}.<br>";
@@ -39,6 +43,7 @@
 					sys_name, 
 					sys_ver, 
 					sys_logo, 
+					navbar_logo, 
 					favicon, 
 					quote_title, 
 					ceo_pres, 
@@ -55,6 +60,7 @@
 					'System Title', 
 					'1.0.0', 
 					'Logo.png', 
+					'Logo.svg', 
 					'favicon.ICO', 
 					'Quote, saying or moto', 
 					'Owner T. Businness', 

@@ -6,3 +6,12 @@
 	margin: 0 auto;
 	margin-bottom: 4rem;
 }
+
+#myAuth footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #323232;
+	color: white;
+}

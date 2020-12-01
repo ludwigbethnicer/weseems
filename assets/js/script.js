@@ -43,3 +43,16 @@ $(document).ready(function(){
 function goBack() {
 	window.history.back();
 }
+
+function PwHideShow() {
+	var x = document.getElementById("passcode");
+	if (x.type === "password") {
+		x.type = "text";
+		$('#show_hide_password i').removeClass( "fa-eye-slash" );
+		$('#show_hide_password i').addClass( "fa-eye" );
+	} else {
+		x.type = "password";
+		$('#show_hide_password i').addClass( "fa-eye-slash" );
+		$('#show_hide_password i').removeClass( "fa-eye" );
+	}
+}

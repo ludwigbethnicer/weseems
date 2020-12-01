@@ -1,0 +1,25 @@
+* Basic Web Pages
+
+	- Home
+	- Services: Programs or other
+	- Testimonial
+	- About
+	- Contact Us
+
+* Basic Web Layout
+
+	- Header
+		> Banner
+		> Navbar
+
+	- Content
+		> About
+		> Values (Mission/Vission)
+		> Services / Programs
+		> Testimonial
+		> Contact Us
+
+	- Footer
+		> Location / Map
+		> Copyright
+

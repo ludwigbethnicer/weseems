@@ -1,8 +1,7 @@
 <?php
 
-	include_once "../../inc/core.php";
+	$page_title = "Forgot Password";
 	include_once "../../inc/webconfig/conf.php";
-	$page_title = "Login";
 	include_once "../../content/theme/default/auth-header.php";
-	include_once "../../content/view/login/index.php";
+	include_once "../../content/view/forgotpw/index.php";
 	include_once "../../content/theme/default/auth-footer.php";

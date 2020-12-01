@@ -10,5 +10,6 @@
 		$err2 = strrchr($e,"1049");
 		if($err2=1049){
 			echo "Error: Unknown Database.<br><a href='dbase/creadb'>Fix It!</a>";
+			die;
 		}
 	}
