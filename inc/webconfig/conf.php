@@ -8,7 +8,7 @@
 	}
 
 	try {
-		$cnn = new PDO("mysql:host={$host};dbname={$db}", $uname, $pw);
+		$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 		$qry_webconf = "SELECT * FROM conf LIMIT 1";
 		$stmt_webconf = $cnn->prepare($qry_webconf);
 		$stmt_webconf->execute();

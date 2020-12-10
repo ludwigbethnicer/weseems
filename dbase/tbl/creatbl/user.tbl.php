@@ -1,12 +1,12 @@
 <?php
-	// 2020 11 24 000 	||		4 2 2 3		||		=> 11
+	// ID Format :	 2020 11 24 000 	||		4 2 2 3		||		=> 11
 	include_once "../../inc/cnndb.php";
 	$tblname = "tblsysuser";
 	$tblname2 = strtoupper($tblname);
 	$TableTitle = "System User";
 	$msg_insert = "Insert default data for {$TableTitle} <br>";
 
-	$cnn = new PDO("mysql:host={$host};dbname={$db}", $uname, $pw);
+	$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 	$chksql = "SELECT 1 FROM {$tblname} LIMIT 1";
 	$chksql = $cnn->query($chksql);
 
@@ -19,13 +19,17 @@
 				username VARCHAR(254) NOT NULL, 
 				passcode VARCHAR(254) NOT NULL, 
 				pin VARCHAR(6) NOT NULL, 
-				fullname VARCHAR(254) NOT NULL, 
+				fullname text NOT NULL, 
 				uemail VARCHAR(254) NOT NULL, 
 				umobileno VARCHAR(254) NOT NULL, 
+				xposition VARCHAR(254) NOT NULL, 
 				ulevpos INT(3) NOT NULL, 
 				uonline INT(1) NOT NULL, 
 				ustatz INT(1) NOT NULL, 
 				createdby VARCHAR(254) NOT NULL, 
+				lname text NOT NULL, 
+				fname text NOT NULL, 
+				mname text NOT NULL, 
 				created DATETIME NOT NULL DEFAULT current_timestamp(), 
 				modified TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp());";
 			$cnn->exec($sql);
@@ -43,6 +47,7 @@
 					fullname, 
 					uemail, 
 					umobileno, 
+					xposition, 
 					ulevpos, 
 					uonline, 
 					ustatz, 
@@ -55,6 +60,7 @@
 					'Admin A. Minad', 
 					'admin@info.com', 
 					'+639754826025', 
+					'Administrator', 
 					'1', 
 					'0', 
 					'1', 
@@ -67,6 +73,7 @@
 					'User U. Resu', 
 					'user@info.com', 
 					'+639751234567', 
+					'User', 
 					'2', 
 					'0', 
 					'1', 
@@ -79,6 +86,7 @@
 					'Guest G. Tseug', 
 					'guest@info.com', 
 					'+639750000000', 
+					'Guest', 
 					'3', 
 					'0', 
 					'0', 

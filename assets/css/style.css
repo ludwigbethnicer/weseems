@@ -1,5 +1,4 @@
 /** Default Style **/
-
 .w360center {
 	width: 100%;
 	max-width: 453px;
@@ -15,3 +14,23 @@
 	background-color: #323232;
 	color: white;
 }
+
+.table-hover tbody tr:hover {
+	cursor: pointer;
+}
+
+/** Dashboard Style **/
+#listRecView .btn-sm, 
+#listRecView2 .btn-sm {
+	padding: .25rem!important;
+}
+
+#myDashB .alert {
+	padding-top: 6px;
+	padding-bottom: 0;
+}
+
+#myDashB .alert-dismissible .close {
+	padding: 4px;
+}
+/** Dashboard Style **/

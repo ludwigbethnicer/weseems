@@ -6,8 +6,8 @@ xmlhttp_sysconfig.onreadystatechange = function() {
 		document.getElementById("AppTitle").innerHTML = myObj_sysconfig.AppTitle;
 		document.getElementById("freshre").content = myObj_sysconfig.IdleTime+";";
 		document.getElementById("xfavicon").href = "storage/img/"+myObj_sysconfig.AppIcon;
-		document.getElementById("themestyle").href = myObj_sysconfig.xHomeDomain+myObj_sysconfig.ThemeName+"/assets/css/style.css";
-		document.getElementById("themeScript").src = myObj_sysconfig.xHomeDomain+myObj_sysconfig.ThemeName+"/assets/js/script.js";
+		document.getElementById("themestyle").href = myObj_sysconfig.ThemeName+"/assets/css/style.css";
+		document.getElementById("themeScript").src = myObj_sysconfig.ThemeName+"/assets/js/script.js";
 	}
 };
 xmlhttp_sysconfig.open("GET", "inc/webconfig", true);

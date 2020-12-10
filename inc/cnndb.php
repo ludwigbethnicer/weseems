@@ -3,7 +3,7 @@
 	include_once "srvr.php";
 	
 	try {
-		$cnn = new PDO("mysql:host={$host};dbname={$db}", $uname, $pw);
+		$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 		$cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (PDOException $e) {
 		$err = $e->getMessage();

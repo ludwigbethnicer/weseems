@@ -2,8 +2,8 @@
 
 	$host = "localhost";
 	$db = "defaultdb";
-	$uname = "root";
+	$unameroot = "root";
 	$pw = "6bNXmSOg6oOfrB3D";
 	$err = "";
-	$conn = null;
+	$cnn = null;
 	// 6bNXmSOg6oOfrB3D

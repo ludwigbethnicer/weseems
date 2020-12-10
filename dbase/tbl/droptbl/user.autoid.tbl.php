@@ -4,7 +4,7 @@
 	$tblname = "tblsysuser_autoid";
 	$tblname2 = strtoupper($tblname);
 
-	$cnn = new PDO("mysql:host={$host};dbname={$db}", $uname, $pw);
+	$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 	$chksql=$cnn->prepare("DROP TABLE {$tblname}");
 
 	if ($chksql->execute()) {

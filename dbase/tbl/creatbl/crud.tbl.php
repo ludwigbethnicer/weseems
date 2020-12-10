@@ -6,7 +6,7 @@
 	$TableTitle = "CRUD";
 	$msg_insert = "Insert default data for {$TableTitle} <br>";
 
-	$cnn = new PDO("mysql:host={$host};dbname={$db}", $uname, $pw);
+	$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 	$chksql = "SELECT 1 FROM {$tblname} LIMIT 1";
 	$chksql = $cnn->query($chksql);
 
@@ -18,23 +18,26 @@
 				id INT(11) AUTO_INCREMENT PRIMARY KEY, 
 				fieldtxt VARCHAR(254) NOT NULL, 
 				status INT(1) NOT NULL, 
-				created DATETIME NOT NULL, 
-				modified TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp());";
+				created DATETIME NOT NULL DEFAULT current_timestamp(), 
+				modified TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(), 
+				deletedx INT(1) NOT NULL
+			);";
 			$cnn->exec($sql);
 			echo "Database Table created successfully: {$TableTitle}.<br>";
 
 			$sql_insert = "INSERT INTO {$tblname} (
 					fieldtxt, 
-					status,  
-					created) 
+					status, 
+					deletedx
+				) 
 				VALUES (
 					'Sample', 
 					1, 
-					current_timestamp()
+					0
 				), (
 					'Sample2', 
 					0, 
-					current_timestamp()
+					0
 				)
 				";
 			$cnn->exec($sql_insert);

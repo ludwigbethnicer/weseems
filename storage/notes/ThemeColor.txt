@@ -7,3 +7,4 @@
 #ff8c8c	=>	icon details 2
 
 #323232	=>	footer 
+

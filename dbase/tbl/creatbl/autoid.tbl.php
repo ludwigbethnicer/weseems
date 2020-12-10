@@ -5,7 +5,7 @@
 	$tblname2 = strtoupper($tblname);
 	$TableTitle = "Sample AutoID";
 
-	$cnn = new PDO("mysql:host={$host};dbname={$db}", $uname, $pw);
+	$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 	$chksql = "SELECT 1 FROM {$tblname} LIMIT 1";
 	$chksql = $cnn->query($chksql);
 

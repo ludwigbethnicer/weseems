@@ -1,5 +1,5 @@
 <?php
-	include_once "../../content/template-part/fieldaudit-navbar.php";
+	include_once "../../content/template-part/partner-navbar.php";
 ?>
 
 <div class="container">

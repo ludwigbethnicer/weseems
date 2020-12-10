@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 	<meta http-equiv="refresh" id="freshre">
 	<title id="AppTitle"></title>
 	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
@@ -16,4 +18,4 @@
 	<script src="<?php echo $domainhome; ?>assets/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="<?php echo $domainhome; ?>assets/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body id="myHome" data-spy="scroll" data-target=".navbar" data-offset="60" oncontextmenu="return false;">
+<body id="myHome" data-spy="scroll" data-target=".navbar" data-offset="60" oncontextmenu="return false;" class="bg-secondary">

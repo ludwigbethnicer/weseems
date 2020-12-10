@@ -1,0 +1,93 @@
+Bootstrap 4 Color
+
+	Button (10)
+
+		Basic		btn
+		Primary		btn btn-primary
+		Secondary	btn btn-secondary
+		Success		btn btn-success
+		Info		btn btn-info
+		Warning		btn btn-warning
+		Danger		btn btn-danger
+		Dark		btn btn-dark
+		Light		btn btn-light
+		Link		btn btn-link
+
+	Button Out-Line (10)
+
+		Primary		btn btn-outline-primary
+		Secondary	btn btn-outline-secondary
+		Success		btn btn-outline-success
+		Info		btn btn-outline-info
+		Warning		btn btn-outline-warning
+		Danger		btn btn-outline-danger
+		Dark		btn btn-outline-dark
+		Light		btn btn-outline-light text-dark
+
+	Text (11)
+
+		Muted		text-muted
+		Primary		text-primary
+		Secondary	text-secondary
+		Success		text-success
+		Info		text-info
+		Warning		text-warning
+		Danger		text-danger
+		Dark		text-dark
+		Light		text-light
+		Body		text-body
+		White		text-white	| 	text-white-50
+									text-black-50
+
+	Background (8)
+
+		Primary		bg-primary
+		Secondary	bg-secondary
+		Success		bg-success
+		Info		bg-info
+		Warning		bg-warning
+		Danger		bg-danger
+		Dark		bg-dark
+		Light		bg-light
+
+	Badge (8)
+
+		Basic		badge badge-pill
+		Primary		badge badge-pill badge-primary
+		Secondary	badge badge-pill badge-secondary
+		Success		badge badge-pill badge-success
+		Info		badge badge-pill badge-info
+		Warning		badge badge-pill badge-warning
+		Danger		badge badge-pill badge-danger
+		Light		badge badge-pill badge-light
+		Dark		badge badge-pill badge-dark
+
+Basic		
+Muted		
+Primary		
+Secondary	
+Success		
+Info		
+Warning		
+Danger		
+Dark		
+Light		
+Link		
+Body		
+White		
+Black		
+
+Basic
+Muted
+Primary
+Secondary
+Success
+Info
+Warning
+Danger
+Dark
+Light
+Link
+Body
+White
+Black

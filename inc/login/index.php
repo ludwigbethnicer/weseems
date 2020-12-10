@@ -7,7 +7,7 @@
 					echo 'Please Enter user and password.';
 				echo '</div>';
 			} else {
-				$cnn = new PDO("mysql:host={$host};dbname={$db}", $uname, $pw);
+				$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 				$query = "SELECT * FROM tblsysuser WHERE username=:username AND passcode=:passcode LIMIT 1";
 				$statement = $cnn->prepare($query);
 				$statement->execute(array(
@@ -21,11 +21,21 @@
 					$usercode = $row['usercode'];
 					$fullname = $row['fullname'];
 					$ulevpos = $row['ulevpos'];
+					$surname = $row['lname'];
+					$firstname = $row['fname'];
+					$middlename = $row['mname'];
+					$uposition = $row['xposition'];
 					
 					$_SESSION["usercode"] = $usercode;
 					$_SESSION["username"] = $_POST["username"];
 					$_SESSION["fullname"] = $fullname;
 					$_SESSION["ulevpos"] = $ulevpos;
+
+					$_SESSION["surname"] = $surname;
+					$_SESSION["firstname"] = $firstname;
+					$_SESSION["middlename"] = $middlename;
+					$_SESSION["postitle"] = $uposition;
+					
 					header('location:../../');
 				} else {
 					echo '<div class="alert alert-danger alert-dismissible fade show">';
