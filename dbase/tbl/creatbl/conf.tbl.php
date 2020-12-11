@@ -77,7 +77,7 @@
 					'+63 909 482 6025', 
 					'Sed ut perspiciatis unde omnis iste natus', 
 					'default', 
-					'/weseems', 
+					'/weseems/', 
 					5, 
 					current_timestamp()
 				)

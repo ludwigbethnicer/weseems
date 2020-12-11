@@ -4,7 +4,12 @@
 	if ($chckfle) {
 		include_once "inc/srvr.php";
 	} else {
-		include_once "../../inc/srvr.php";
+		$chckfle1 = file_exists("../../inc/srvr.php");
+		if ($chckfle1) {
+			include_once "../../inc/srvr.php";
+		} else {
+			include_once "../../../inc/srvr.php";
+		}
 	}
 
 	try {

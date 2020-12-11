@@ -51,7 +51,11 @@
 					ulevpos, 
 					uonline, 
 					ustatz, 
-					createdby) 
+					createdby, 
+					lname, 
+					fname, 
+					mname
+					) 
 				VALUES (
 					'00000000000', 
 					'admin', 
@@ -64,7 +68,10 @@
 					'1', 
 					'0', 
 					'1', 
-					'00000000000'
+					'00000000000', 
+					'Minad', 
+					'Admin', 
+					'Amind'
 				), (
 					'00000000001', 
 					'user', 
@@ -77,7 +84,10 @@
 					'2', 
 					'0', 
 					'1', 
-					'00000000000'
+					'00000000000', 
+					'Resu', 
+					'User', 
+					'Uesr'
 				), (
 					'00000000002', 
 					'guest', 
@@ -90,7 +100,10 @@
 					'3', 
 					'0', 
 					'0', 
-					'00000000000'
+					'00000000000', 
+					'Tseug', 
+					'Guest', 
+					'Geust'
 				)
 				";
 			$cnn->exec($sql_insert);

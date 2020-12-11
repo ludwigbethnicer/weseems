@@ -33,4 +33,13 @@
 #myDashB .alert-dismissible .close {
 	padding: 4px;
 }
+
+#myDashB .footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: transparent;
+	color: inherit;
+}
 /** Dashboard Style **/

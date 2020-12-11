@@ -60,9 +60,7 @@
 	<div class="container-fluid">
 		<div class="d-flex">
 			<h4 class="mr-2 mb-2">CRUD</h4>
-			<button type="button" class="btn btn-outline-info btn-sm mr-2 mb-2" data-toggle="modal" data-target="#modAddNew">
-				Add New
-			</button>
+			<a href="../../routes/crud/addnew" class="btn btn-outline-info btn-sm mr-2 mb-2">Add New</a>
 
 			<div class="mr-2">
 				<form>
@@ -86,7 +84,7 @@
 							<?php
 								$tblname = "tblcrud";
 								$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
-								$qry_grpby = $cnn->prepare("SELECT fieldtxt FROM {$tblname} GROUP BY fieldtxt ORDER BY fieldtxt ASC");
+								$qry_grpby = $cnn->prepare("SELECT fieldtxt FROM {$tblname} WHERE deletedx=0 GROUP BY fieldtxt ORDER BY fieldtxt ASC");
 								$qry_grpby->execute();
 								$rslt_grpby = $qry_grpby->setFetchMode(PDO::FETCH_ASSOC);
 								foreach ($qry_grpby as $row_grpby) {
@@ -114,71 +112,9 @@
 		</div>
 
 		<div id="viewRecordz" class="table-responsive-sm">
-			<?php include_once "viewall.php"; ?>
+			<?php
+				include_once "viewall.php";
+			?>
 		</div>
-
-		<!-- The Modal -->
-		<div class="modal fade" id="modAddNew">
-			<div class="modal-dialog modal-dialog-scrollable modal-md">
-				<div class="modal-content">
-					<!-- Modal Header -->
-					<div class="modal-header">
-						<h4 class="modal-title">Add new record</h4>
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-					<!-- Modal body -->
-					<div class="modal-body">
-						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="needs-validation" novalidate>
-							<div class="input-group mb-3 input-group-sm">
-								<div class="input-group-prepend">
-									<span class="input-group-text">Fieldtxt</span>
-								</div>
-								<input id="idxfieldtxt" type="text" class="form-control" placeholder="Fieldtxt" name="idxfieldtxt" required>
-								<div class="valid-feedback">Valid.</div>
-								<div class="invalid-feedback">Please fill out this field.</div>
-							</div>
-							<hr>
-							<?php  
-								if (isset($error_message)) {
-									echo "<div class='alert alert-danger alert-dismissible mb-0 fade show'><button type='button' class='close' data-dismiss='alert'>&times;</button>".$err_msg."</div>";
-								}
-							?>
-					</div>
-					<!-- Modal footer -->
-					<div class="modal-footer">
-						<input type="submit" name="btnSave" value="Save" class="btn btn-info btn-sm">
-						<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- The Modal -->
 	</div>
 </main>
-
-<?php
-
-	try {
-		if (isset($_POST['btnSave'])) {
-			if (empty($_POST['idxfieldtxt'])) {
-				$err_msg = "Please fill-up the form properly.";
-			} else {
-				// search for duplicate
-				$stblname = "tblcrud";
-				$dupli_txt = "fieldtxt";
-				$qry_dupli = "SELECT * FROM {$stblname} WHERE {$dupli_txt}=:txtfields";
-				$stmt_dupli = $cnn->prepare($qry_dupli);
-				$txtfields = $_POST['idxfieldtxt'];
-				$stmt_dupli->bindParam(':txtfields', $txtfields);
-				$stmt_dupli->execute();
-				$rw_counts = $stmt_dupli->rowCount();
-
-				if ($rw_counts > 0) {
-					$err_msg = "Record already exist.";
-				}
-			}
-		}
-	} catch (PDOException $error) {
-		$err_msg = $error->getMessage();
-	}

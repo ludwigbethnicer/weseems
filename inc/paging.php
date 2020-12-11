@@ -55,6 +55,11 @@
 					echo "<span class='fas fa-angle-double-right'></span>";
 				echo "</a>";
 			echo "</li>";
-		}	 
+		}
+		echo "<li class='page-item'>";
+			echo "<a class='page-link' href='' title='Refresh'>";
+				echo "<span class='fas fa-sync'></span>";
+			echo "</a>";
+		echo "</li>";
 	echo "</ul>";
 ?>

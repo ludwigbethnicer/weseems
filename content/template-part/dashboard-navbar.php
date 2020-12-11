@@ -1,5 +1,12 @@
 <?php
-	include_once "../../inc/xsession.php";
+	$chckfle2 = file_exists("../../inc/xsession.php");
+	if ($chckfle2) {
+		include_once "../../inc/xsession.php";
+		$baklnk = "../../";
+	} else {
+		include_once "../../../inc/xsession.php";
+		$baklnk = "../../../";
+	}
 ?>
 
 <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -10,7 +17,7 @@
 <nav id="sidebar" class="sidebar-wrapper">
 	<div class="sidebar-content">
 		<div class="sidebar-brand">
-			<a href="../../">Visit Site</a>
+			<a href="<?php echo $baklnk; ?>">Visit Site</a>
 			<div id="close-sidebar">
 				<i class="fas fa-times"></i>
 			</div>
@@ -41,7 +48,7 @@
 					<span>System</span>
 				</li>
 				<li>
-					<a href="../../routes/dashboard">
+					<a href="<?php echo $baklnk; ?>routes/dashboard">
 						<i class="fas fa-server"></i>
 						<span>Dashboard</span>
 						<span class="badge badge-pill badge-primary">Main</span>
@@ -118,11 +125,15 @@
 					<span>Extra</span>
 				</li>
 				<li>
-					<a href="../../routes/crud" title="Create Read Update Delete Search">
+					<a href="<?php echo $baklnk; ?>routes/crud" title="Create Read Update Delete Search">
 						<i class="fa fa-book"></i>
 						<span>CRUDs</span>
 						<span class="badge badge-pill badge-secondary">Sample</span>
 					</a>
+				</li>
+
+				<li class="header-menu">
+					<span>Trash Data</span>
 				</li>
 			</ul>
 		</div>
@@ -146,7 +157,7 @@
 		<a href="" title="Refresh">
 			<i class="fas fa-sync"></i>
 		</a>
-		<a href="../../inc/logout" title="Logout">
+		<a href="<?php echo $baklnk; ?>inc/logout" title="Logout">
 			<i class="fa fa-power-off"></i>
 		</a>
 	</div>

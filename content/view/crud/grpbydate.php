@@ -6,7 +6,7 @@
 	include_once "../../../inc/srvr.php";
 	$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
 	$fltrbydate = date("Y-m-d", strtotime($_GET['fltrbydate']));
-	$qry = "SELECT * FROM {$tblname} WHERE DATE_FORMAT(created, '%Y-%m-%d') = :fltrbydate AND deletedx=0 ORDER BY {$prim_id} DESC LIMIT :from_record_num, :records_per_page";
+	$qry = "SELECT * FROM {$tblname} WHERE DATE_FORMAT(created, '%Y-%m-%d')=:fltrbydate AND deletedx=0 ORDER BY {$prim_id} DESC LIMIT :from_record_num, :records_per_page";
 	$stmt = $cnn->prepare($qry);
 	$stmt->bindValue(":fltrbydate", $fltrbydate);
 	$stmt->bindParam(":from_record_num", $from_record_num, PDO::PARAM_INT);
@@ -22,7 +22,6 @@
 	$total_rows = $row_page['total_rows'];
 
 	$page_url="?";
-	include_once "../../../inc/paging.php";
 
 ?>
 
@@ -52,7 +51,7 @@
 						echo "<td>{$created}</td>";
 						echo "<td>{$id}</td>";
 						echo "<td class='text-right'>";
-							echo "<a class='btn-sm btn-success btn-inline' href='#' title='View'><span class='fas fa-edit'></span></a>";
+							echo "<a href='../../routes/crud/editupdate' class='btn-sm btn-success btn-inline' title='Edit'><span class='far fa-edit'></span></a>";
 							echo "<a class='btn-sm btn-dark btn-inline' href='#' onclick='trash({$id})' title='Delete'><span class='fas fa-trash-alt'></span></a>";
 						echo '</td>';
 					echo '</tr>';
@@ -65,3 +64,7 @@
 		?>
 	</tbody>
 </table>
+
+<footer class="container-fluid text-center footer pt-2">
+	<?php include_once "../../../inc/paging.php"; ?>
+</footer>
