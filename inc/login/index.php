@@ -4,11 +4,11 @@
 			if (empty($_POST["username"]) || empty($_POST["passcode"])) {
 				echo '<div class="alert alert-danger alert-dismissible fade show">';
 					echo '<button type="button" class="close" data-dismiss="alert">&times;</button>';
-					echo 'Please Enter user and password.';
+					echo 'Please enter username and password.';
 				echo '</div>';
 			} else {
 				$cnn = new PDO("mysql:host={$host};dbname={$db}", $unameroot, $pw);
-				$query = "SELECT * FROM tblsysuser WHERE username=:username AND passcode=:passcode LIMIT 1";
+				$query = "SELECT * FROM tblsysuser WHERE ustatz=1 AND username=:username AND passcode=:passcode LIMIT 1";
 				$statement = $cnn->prepare($query);
 				$statement->execute(array(
 					'username'	=>	$_POST["username"],
@@ -40,7 +40,7 @@
 				} else {
 					echo '<div class="alert alert-danger alert-dismissible fade show">';
 						echo '<button type="button" class="close" data-dismiss="alert">&times;</button>';
-						echo 'Please enter valid username and password.';
+						echo 'Either your account is disbabled, inactive, not verified or wrong username and password.';
 					echo '</div>';
 				}
 			}

@@ -33,6 +33,7 @@
 		$maddress = $row_webconf['maddress'];
 		$themename = $row_webconf['themename'];
 		$domainhome = $row_webconf['domainhome'];
+		$geomap = $row_webconf['geo_map'];
 		$idletime = $row_webconf['idletime'] * 60;
 	} catch(PDOException $e) {
 		$err = $e->getMessage();
@@ -40,5 +41,6 @@
 		if($err2=1049){
 			echo $err;
 		}
+		die;
 	}
 	$cnn = null;

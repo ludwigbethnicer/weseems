@@ -16,8 +16,10 @@
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback">Please fill out this field.</div>
 			</div>
-			<input type="submit" name="btnSave" value="Save" class="btn btn-info btn-sm">
-			<a href="../../../routes/crud" class="btn btn-danger btn-sm">Close</a>
+			<div class="row justify-content-end">
+				<input type="submit" name="btnSave" value="Save" class="btn btn-info btn-sm m-2">
+				<a href="../../../routes/crud" class="btn btn-danger btn-sm m-2">Close</a>
+			</div>
 		</form>
 	</div>
 </main>

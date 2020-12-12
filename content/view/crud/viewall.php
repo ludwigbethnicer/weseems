@@ -48,7 +48,7 @@
 						echo "<td>{$id}</td>";
 						echo "<td class='text-right'>";
 							echo "<a href='../../routes/crud/editupdate?id={$id}' class='btn-sm btn-success btn-inline' title='Edit'><span class='far fa-edit'></span></a>";
-							echo "<a class='btn-sm btn-dark btn-inline' href='#' onclick='trash({$id})' title='Delete'><span class='fas fa-trash-alt'></span></a>";
+							echo "<a class='btn-sm btn-dark btn-inline ml-1' href='#' onclick='trash({$id})' title='Delete'><span class='fas fa-trash-alt'></span></a>";
 						echo '</td>';
 					echo '</tr>';
 				}
@@ -61,6 +61,4 @@
 	</tbody>
 </table>
 
-<footer class="container-fluid text-center footer pt-2">
-	<?php include_once "../../inc/paging.php"; ?>
-</footer>
+<?php include_once "../../inc/paging.php"; ?>

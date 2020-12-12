@@ -2,7 +2,7 @@
 		<a href="#myPage" title="To Top">
 			<span class="glyphicon glyphicon-chevron-up"></span>
 		</a>
-		<p class="m-0">Copyright &copy; <?php echo date('Y'); ?> <a href="https://www.mlhuillier.com" target="_blank" title="Visit MLhuillier, Inc. Philippines">MLhuillier</a>, Inc. Philippines. All Rights Reserved.</p>
+		<p class="m-0">Copyright &copy; <?php echo date('Y'); ?> <a href="https://www.google.com" target="_blank" title="Visit Company, Inc. Philippines">Company</a>, Inc. Philippines. All Rights Reserved.</p>
 		<ul class="nav justify-content-center">
 		<?php
 			if(empty($_SESSION["usercode"])) {

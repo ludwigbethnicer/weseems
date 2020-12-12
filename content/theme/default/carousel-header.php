@@ -9,7 +9,7 @@
 	<!-- The slideshow -->
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src="<?php echo $domainhome; ?>storage/img/mlitauditbg1.png" alt="Los Angeles">
+			<img src="<?php echo $domainhome; ?>storage/img/la.jpg" alt="Los Angeles">
 		</div>
 		<div class="carousel-item">
 			<img src="<?php echo $domainhome; ?>storage/img/chicago.jpg" alt="Chicago">

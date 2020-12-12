@@ -56,3 +56,29 @@ function PwHideShow() {
 		$('#show_hide_password i').removeClass( "fa-eye" );
 	}
 }
+
+function PwHideShow1() {
+	var x = document.getElementById("passcode1");
+	if (x.type === "password") {
+		x.type = "text";
+		$('#show_hide_password1 i').removeClass( "fa-eye-slash" );
+		$('#show_hide_password1 i').addClass( "fa-eye" );
+	} else {
+		x.type = "password";
+		$('#show_hide_password1 i').addClass( "fa-eye-slash" );
+		$('#show_hide_password1 i').removeClass( "fa-eye" );
+	}
+}
+
+function PwHideShow2() {
+	var x = document.getElementById("passcode2");
+	if (x.type === "password") {
+		x.type = "text";
+		$('#show_hide_password2 i').removeClass( "fa-eye-slash" );
+		$('#show_hide_password2 i').addClass( "fa-eye" );
+	} else {
+		x.type = "password";
+		$('#show_hide_password2 i').addClass( "fa-eye-slash" );
+		$('#show_hide_password2 i').removeClass( "fa-eye" );
+	}
+}

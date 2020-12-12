@@ -23,7 +23,7 @@
 					<div class="form-group">
 						<label for="passcode">Password:</label>
 						<div class="input-group mb-3" id="show_hide_password">
-							<input type="password" class="form-control" id="passcode" placeholder="Password" name="passcode"  required>
+							<input type="password" class="form-control password" id="passcode" placeholder="Password" name="passcode"  required>
 							<div class="input-group-prepend">
 								<span class="input-group-text">
 									<i class="fa fa-eye-slash" aria-hidden="true" onclick="PwHideShow()"></i>

@@ -4,4 +4,8 @@
 	include_once "../../content/theme/".$themename."/frontend-navbar.php";
 ?>
 
-<h1>Contact Us</h1>
+<main class="page-content">
+	<div class="container-fluid">
+		<h1>Contact Us</h1>
+	</div>
+</main>

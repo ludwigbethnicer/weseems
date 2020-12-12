@@ -65,6 +65,4 @@
 	</tbody>
 </table>
 
-<footer class="container-fluid text-center footer pt-2">
-	<?php include_once "../../../inc/paging.php"; ?>
-</footer>
+<?php include_once "../../../inc/paging.php"; ?>

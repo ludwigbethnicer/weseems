@@ -21,22 +21,20 @@
 					
 				} else {
 					echo '<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Management</a>
-						<div class="dropdown-menu">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Menu</a>
+						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#">Record Listing</a>
 							<a class="dropdown-item border-bottom" href="'.$domainhome.'routes/dashboard">SysControl</a>
 							<a class="dropdown-item" href="'.$domainhome.'routes/partner">Partner</a>
 							<a class="dropdown-item" href="'.$domainhome.'routes/reports">Reports</a>
 							<a class="dropdown-item" href="#">Technical</a>
 							<a class="dropdown-item border-top" href="#">Client</a>
-							<a class="dropdown-item border-top" href="'.$domainhome.'inc/logout">Logout</a>
+							<a class="dropdown-item border-top" href="'.$domainhome.'routes/chngepss">Change Password</a>
+							<a class="dropdown-item" href="'.$domainhome.'inc/logout">Logout</a>
 						</div>
 					</li>';
 				}
 			?>
-			<li class="nav-item">
-				<a class="btn nav-link btn-secondary btn-sm m-1" href="">Refresh</a>
-			</li>
 		</ul>
 	</div>
 </nav>
